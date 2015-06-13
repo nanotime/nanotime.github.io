@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="description" content="Bitácora de construcción del sitio, avances a nivel de desarrollo en un bit a la vez">
+    <meta name="keywords" content="desarrollo,css,jade,javascript">
+    <meta name="author" content="Nano">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Otro paso corto hacia adelante</title><link rel='stylesheet' href='/css/master.css' />
+<link rel='stylesheet' href='/css/icons.css' />
+<link rel='stylesheet' href='/css/prism.css' />
+  </head>
+  <body>
+    <header id="site-head">
+      <div class="title-container">
+        <h1 class="site-title">Un bit a la vez</h1>
+        <h3 class="site-description">La vida de un programador aburrido</h3>
+      </div>
+    </header>
+    <nav id="site-nav">
+      <ul>
+        <li class="nav-item"><a href="/"><i class="icon-home2"></i></a></li>
+        <li class="nav-item"><a href="http://www.github.com/nanotime" target="_blank"><i class="icon-github"></i></a></li>
+        <li class="nav-item"><a href="http://www.twitter.com/_nanodice_" target="_blank"><i class="icon-twitter3"></i></a></li>
+        <li class="nav-item"><a href="#"><i class="icon-briefcase"></i></a></li>
+      </ul>
+    </nav>
+    <article class="post">
+      <h2>Otro paso corto hacia adelante</h2>
+          <div class="postbox">
+            <div>
+              <p class="postbox-item"><i class="icon-pacman"> </i>Nano
+              </p>
+              <p class="postbox-item"><i class="icon-clock"></i>30/05/2015
+              </p>
+              <p class="postbox-item"><i class="icon-price-tags"></i>posts
+              </p>
+            </div>
+          </div>
+          <div class="heading-img"><img src="../../img/linus-torvalds-nvidia.jpg" alt="Linus Torvalds Nvidia" class="hero-img"></div><p>Me impresiona la lentitud con la que hago las cosas... aunque también influye el hecho de que no tengo el tiempo que quisiera para dedicarle a todo lo que quiero hacer.</p>
+<p>Cosas a parte, logré hacer tres pequeñas implementaciones en el sitio para llevarlo un paso mas allá, aunque es un paso cortito. La idea era agregar botones sociales para quien quisiera pudiese compartir lo que lee. Claro que esto no iba a ser de la manera simple, hacerlos desde cero. </p>
+<p>El problemita que tienen los botones sociales que proveen muchas redes es que el código está truncado (minificado, uglificado) y no sabes exactamente <strong>que está pasando ahí</strong>. No soy un gran fanático de no saber donde me meto aunque tampoco un talibán de la privacidad; admitamos que en un mundo como el de hoy, la privacidad es una utopía.</p>
+<p>Claro, hacer estos botones sociales (que puedes observar abajo, al final del post) no fue un gran desafío, lo mas o menos fastidioso fue convertir el snippet que los agrega en una porción de código reusable:</p>
+
+      <pre><code class="language-jade">mixin social(tweetText)
+  .social-wrapper
+   a.goback.social-item(href="/"): i.icon-home2
+    
+    a.social-item.facebook(href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fnanotime.github.io%2F" target="_blank")
+      i.icon-facebook3
+    
+    a.social-item.twitter(href="https://twitter.com/intent/tweet?url=http://nanotime.github.io&text=&via=_nanodice_" target="_blank")
+      i.icon-twitter3
+    
+    a.social-item.google-plus(href="https://plus.google.com/share?url=http://nanotime.github.io" target="_blank")
+        i.icon-google-plus3
+</code></pre><p>Ya que estoy usando un generador estático, cada que quisiera agregar este tipo de cosas debería de:</p>
+<ul>
+<li>Pegar el mismo snippet de codigo cada que cree un artículo.</li>
+<li>Crear una sección <code>block</code> que lo agregue automáticamente (limitando su capacidad de personalización).</li>
+<li>O hacer lo que hice, crear un mixin y usarlo donde quiera que lo importe.</li>
+</ul>
+<p>Fue mas fastidioso que otra cosa, porque fue mi primer acercamiento a los <a href="http://jade-lang.com/reference/mixins/">mixins en jade</a>, y las cuestiones de las rutas, pero en cosa de 10 minutos, o 15, todo listo. De hecho de ahí se me vino la idea de crear varios mixins para ciertas cosas que utilizo no solo en los posts sino afuera, como el caso de las cabeceras donde se encuentra la información de cada post, que pueden ver tanto en el digest como en el propio artículo.</p>
+<p>Algo que me habían pedido por Twitter era la capacidad de comentarios, de hecho me dio mucha risa porque, y cito:</p>
+<blockquote>
+<p><em>te hace falta añadir comentarios. En mi opinión un blog/web sin comentarios es como un coche que solo gira a la izquierda :D</em></p>
+</blockquote>
+<p>Morí de risa con eso, y de pena porque es cierto. La cuestión es que estoy tratando de seguir un principio de la Ley de Linus:</p>
+<blockquote>
+<p><em>Libere rápido y amenudo, escuche a sus clientes.</em></p>
+</blockquote>
+<p>Bueno, no es que tenga clientes, pero si trato de liberar cada cosita, cada pieza por mas pequeña que sea lanzarla al sitio luego de las pruebas de <em>no rompe nada</em>, y adelante.</p>
+<p>Así pues, el blog ahora tiene soporte de comentarios :D</p>
+<p>Claro, la tercera es una que no verán, agregar Analytics de Google a mi sitio. ¿Es la mejor idea del mundo? Nope, para nada, pero para salir del paso y tener algo simple con lo que revisar el crecimiento del sitio, está bien... mientras consigo algún reemplazo.</p>
+<p>¿Cosas que le faltan al blog? ... Oh por dios, ¡Toneladas de cosas! No tengo soporte de estilos para <em>N</em> cantidad de elementos de texto, el codigo fuente es un caos sin estructura definida, seguro tengo mas de una mala práctica hecha por algún sitio... etc.</p>
+<p>De hecho, aún estoy en la fase de crear una base concreta para poder seguir adelante con mis ideas, el poder agregarle navegación por <em>keystrokes</em> (pulsaciones de teclas) y gestuales en el móvil, por ejemplo. Pero antes de poder hacer ese tipo de cosas necesito montar un simiento fuerte, estructurado y real, profesional.</p>
+<h4 id="el-siguiente-paso-">El siguiente paso?</h4>
+<p>Lo tengo claro, debo comprar <a href="http://bradfrost.com/blog/post/atomic-web-design/">Atomic web Design</a> y <a href="">BEM</a> para reconstruir <strong>la estructura</strong> granular del sitio, para poder tener la capacidad de hacer cambios aislados sin romper otros sitios.</p>
+<p>Mas allá de eso tengo en mente agregar un soporte mucho mas completo a los elementos de texto (<em>listas, citas</em>) y algun pequeño sistemita para imágenes, que de hecho tengo mal cubiertas.</p>
+<p><strong>¿Trabajo?</strong> Me sobra por delante lo que tengo que hacer.
+<strong>¿Cómo me las ingeniaré?</strong> Ni puta idea, pero lo haré.
+<strong>¿Posts distintos al &quot;como estoy haciendo esto&quot;?</strong> A su tiempo, ya tengo borradores.</p>
+<h4 id="algunos-recursos-interesantes-">Algunos recursos interesantes:</h4>
+<ul>
+<li><a href="http://jade-lang.com/">Jade template engine</a></li>
+<li><a href="https://en.bem.info/method/definitions/">BEM methodolgy</a></li>
+<li><a href="https://css-tricks.com/bem-101/">CSS tricks BEM 101</a></li>
+<li><a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">CSS wizardry &quot;MindBEMding – getting your head ’round BEM syntax&quot;</a></li>
+<li><a href="http://bradfrost.com/blog/post/atomic-web-design/">Atomic web design by Brad Frost</a></li>
+</ul>
+<p>Todas esas referencias me las tengo que digerir y hacer comparativas para convencerme de cual usar. Espero que si estás leyendo esto consigas algo que te interese.</p>
+
+          <div class="social-wrapper"><a href="/" class="goback social-item"><i class="icon-home2"></i></a><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fnanotime.github.io%2F" target="_blank" class="social-item facebook"><i class="icon-facebook3"></i></a><a href="https://twitter.com/intent/tweet?url=http://nanotime.github.io&amp;text=Otro paso corto hacia adelante&amp;via=_nanodice_" target="_blank" class="social-item twitter"><i class="icon-twitter3"></i></a><a href="https://plus.google.com/share?url=http://nanotime.github.io" target="_blank" class="social-item google-plus"><i class="icon-google-plus3"></i></a></div>
+          <p class="warning">Por motivos que no puedo resolver, los comentarios estan deshabilitados</p>
+    </article><script src='/js/vendor/jquery-2.1.4.min.js'></script>
+<script src='/js/vendor/jquery-nanopaginator.js'></script>
+<script src='/js/prism.js'></script>
+<script src='/js/main.js'></script>
+  </body>
+</html>
