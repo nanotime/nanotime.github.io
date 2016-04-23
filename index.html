@@ -1,95 +1,259 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <meta name="description" content="description of your site">
-    <meta name="author" content="author of the site">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Un bit a la vez</title><link rel='stylesheet' href='css/master.css' />
-<link rel='stylesheet' href='css/icons.css' />
-<link rel='stylesheet' href='css/prism.css' />
-  </head>
-  <body>
-    <header id="site-head">
-      <div class="title-container">
-        <h1 class="site-title">Un bit a la vez</h1>
-        <h3 class="site-description">La vida de un programador aburrido</h3>
-      </div>
-    </header>
-    <nav id="site-nav">
-      <ul>
-        <li class="nav-item"><a href="/"><i class="icon-home2"></i></a></li>
-        <li class="nav-item"><a href="http://www.github.com/nanotime" target="_blank"><i class="icon-github"></i></a></li>
-        <li class="nav-item"><a href="http://www.twitter.com/_nanodice_" target="_blank"><i class="icon-twitter3"></i></a></li>
-        <li class="nav-item"><a href="#"><i class="icon-briefcase"></i></a></li>
-      </ul>
-    </nav>
-    <section class="content">
-      <article class="post-item">
-        <h2 class="post-title"><a href="/posts/dev/jugando-con-los-documentfragments.html">Jugando con los DocumentFragments</a></h2>
-        <div class="postbox">
-          <div>
-            <p class="postbox-item"><i class="icon-pacman"> </i>Nano
-            </p>
-            <p class="postbox-item"><i class="icon-clock"></i>5/06/2015
-            </p>
-            <p class="postbox-item"><i class="icon-price-tags"></i>dev
-            </p>
-          </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nanotime's Place</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Italiana|Fira+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="row">
+            
+            <header class="col-md-12">
+                
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="profilepic col-md-2 col-sm-2">
+                        <img src="img/propic.jpg" alt="profile pic" class="img-responsive">
+                    </div>
+                    <h1 class="col-md-10 col-sm-10">
+                        Javier Marín
+                        <a href="http://twitter.com/_nanodice_" target="_blank"><@nanotime></a>
+                    </h1>
+                    <section id="data" class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-2">
+                        <p><i class="fa fa-male"></i> Full Name: Javier Eduardo Marín Sganga</p>
+                        <p><i class="fa fa-child"></i> Age: 25</p>
+                        <p><i class="fa fa-globe"></i> Nacionality: Venezuelan</p>
+                        <p><i class="fa fa-briefcase"></i> Ocupation: Frontend Developer</p>
+                        <p><i class="fa fa-envelope-o"></i> Mail: <a href="mailto:nano.world.contact@gmail.com">nano.world.contact@gmail.com</a></p>
+                        <p><i class="fa fa-github-alt"></i> Github: <a href="https://github.com/nanotime" target="_blank">@nanotime</a></p>
+                    </section>
+                    </div>
+                </div>
+
+                <blockquote class="col-md-12 col-lg-8 col-lg-offset-2 text-justify">
+                    A fighter, passionate, geek, ecologist and a beer lover. I think life is a one-time chance and it is necessary to live it through your dreams, and my dream is to develop software all my youth, make a better world with my ideas. I drink coffee as just a programmer does and the search of the innovation push me to learn new things.
+                </blockquote>
+                
+                <div class="index-links col-md-12 visible-xs visible-sm">
+                    <h2 class="text-center">Index</h2>
+                    <ul class="list-unstyled text-center">
+                        <li><a href="#coding-skills" data-scroll>Coding skills</a></li>
+                        <li><a href="#frameworks" data-scroll>Frameworks & libraries</a></li>
+                        <li><a href="#tools" data-scroll>Software tools</a></li>
+                        <li><a href="#education" data-scroll>Education</a></li>
+                        <li><a href="#knowledge" data-scroll>The thirst of Knowledge</a></li>
+                        <li><a href="#projects" data-scroll>Projects</a></li>
+                        <li><a href="#moreabour" data-scroll>More about me</a></li>
+                    </ul>
+                </div>
+
+            </header>
+            <!-- //header -->
+
+            <section id="coding-skills" class="col-md-12 sections">
+                <h2 class="text-center section-title">Coding Skills <i class="fa fa-code"></i></h2>
+                <h3 class="text-center section-sub-title">Here are my actual skills on coding (for now)</h3>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="col-md-4"><img src="img/html-logo.svg" class="img-responsive center-block"></div>
+                        <div class="col-md-4"><img src="img/css-logo.svg" class="img-responsive center-block"></div>
+                        <div class="col-md-4"><img src="img/js-badge.svg" class="img-responsive center-block"></div>
+                    </div>
+                </div>
+                <!-- <a href="#frameworks" data-scroll class="down visible-xs visible-sm btn btn-default"><i class="fa fa-chevron-down"></i></a> -->
+            </section>
+            <!-- //coding skills -->
+
+            <section id="frameworks" class="col-md-12 sections odd">
+                <h2 class="text-center section-title">Frameworks & libraries <i class="fa fa-code"></i></h2>
+                <h3 class="text-center section-sub-title">A look into my weapon box</h3>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="col-md-3 col-xs-6"><img src="img/angular-logo.svg" class="img-responsive center-block"></div>
+                        <div class="col-md-3 col-xs-6"><img src="img/boostrap-logo.svg" class="img-responsive center-block"></div>
+                        <div class="clearfix visible-xs visible-sm"></div>
+                        <div class="col-md-3 col-xs-6"><img src="img/jq-logo.svg" class="img-responsive center-block"></div>
+                        <div class="col-md-3 col-xs-6"><img src="img/koa.svg" class="img-responsive center-block"></div>
+                    </div>
+                </div>
+                <!-- <a href="#tools" data-scroll class="down visible-xs visible-sm btn btn-default"><i class="fa fa-chevron-down"></i></a> -->
+            </section>
+            <!-- //frameworks -->
+
+            <section id="tools" class="col-md-12 sections">
+                <h2 class="text-center section-title">Software tools <i class="fa fa-terminal"></i></h2>
+                <h3 class="text-center section-sub-title">Here is my tool box</h3>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="col-md-4 col-xs-6">
+                            <img src="img/ubuntu.svg" alt="" class="img-responsive center-block">
+                            <p class="text-center">SO: Ubuntu</p>
+                        </div>
+                        <div class="col-md-4 col-xs-6">
+                            <img src="img/sublime-text.png" alt="" class="img-responsive center-block">
+                            <p class="text-center">Editor: Sublime text</p>
+                        </div>
+                        <div class="clearfix visible-sm visible-xs"></div>
+                        <div class="col-md-4 col-xs-6">
+                            <img src="img/git-logo.svg" alt="" class="img-responsive center-block">
+                            <p class="text-center">V.Control: Git</p>
+                        </div>
+                        <div class="col-md-4 col-xs-6">
+                            <img src="img/firefox.svg" alt="" class="img-responsive center-block">
+                            <p class="text-center">Browser: Firefox</p>
+                        </div>
+                        <div class="clearfix visible-xs visible-sm"></div>
+                        <div class="col-md-4 col-xs-6">
+                            <img src="img/chrome.svg" alt="" class="img-responsive center-block">
+                            <p class="text-center">Browser: Chrome</p>
+                        </div>
+                        <div class="col-md-4 col-xs-6">
+                            <img src="img/gimp.png" alt="" class="img-responsive center-block">
+                            <p class="text-center">Bitmaps: Gimp</p>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-md-4 col-xs-6">
+                            <img src="img/inkscape.png" alt="" class="img-responsive center-block">
+                            <p class="text-center">Vectors: Inkscape</p>
+                        </div>
+                        <div class="col-md-4 col-xs-6">
+                            <img src="img/node-logo.svg" alt="" class="img-responsive center-block">
+                            <p class="text-center">Backend / package tools: Nodejs</p>
+                        </div>
+                        <div class="col-md-4 col-xs-6">
+                            <img src="img/terminal.png" alt="" class="img-responsive center-block">
+                            <p class="text-center">Terminal: Fish Shell</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <a href="#education" data-scroll class="down visible-xs visible-sm btn btn-default"><i class="fa fa-chevron-down"></i></a> -->
+            </section>
+            <!-- //tools -->
+            
+
+            <section id="education" class="col-md-12 sections odd">
+                <h2 class="text-center section-title">Education <i class="fa fa-graduation-cap"></i></h2>
+                <h3 class="section-sub-title text-center">For some people, this is important (?)</h3>
+
+                <h4 class="text-center">Technical degree in CS</h4>
+                <!-- <a href="#knowledge" data-scroll class="down visible-xs visible-sm btn btn-default"><i class="fa fa-chevron-down"></i></a> -->
+            </section>
+            <!-- //education -->
+
+            <section id="knowledge" class="col-md-12 sections">
+                <h2 class="text-center section-title">The thirst of knowledge <i class="fa fa-beer"></i></h2>
+                <h3 class="section-sub-title text-center">I need to learn new things, study the old... Grow</h3>
+
+                <div class="col-md-8 col-md-offset-2">
+                    <p>
+                        Since 2012 I've been learning a lot of things on my own. I'm among those who think it is best to learn by oneself.
+                    </p>
+
+                    <ul>
+                        <li>I have worked with responsive web design</li>
+                        <li>I have experimented with different JS frameworks for the client side like <a href="https://angularjs.org/" target="_blank">Angular</a>, <a href="https://vuejs.org/" target="_blank">Vue</a></li>
+                        <li>I played with JS at the server side with <a href="http://nodejs.org/" target="_blank">Nodejs</a>, <a href="http://expressjs.com/" target="_blank">Express</a>, <a href="http://koajs.com/" target="_blank">Koa.js</a></li>
+                        <li>I have learned some UX design patterns and software design patterns</li>
+                    </ul>
+
+                    <p>
+                    To all these, it is telling that everything has always been since my self-conviction, I am an inveterate fan about programming texts, articles, etc. I've collected a number of open books on many technology issues and I tend to stay reading (without even realizing) items in almost any page on programming.
+                    </p>
+                </div>
+                <!-- <a href="#projects" data-scroll class="down visible-xs visible-sm btn btn-default"><i class="fa fa-chevron-down"></i></a> -->
+            </section>
+            <!-- //knowledge -->
+
+            <section id="projects" class="col-md-12 sections odd">
+                <h2 class="text-center section-title">Here are some of my projects <i class="fa fa-briefcase"></i></h2>
+                <h3 class="section-sub-title text-center">Want to check?</h3>
+
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Uniqd</div>
+                        <div class="panel-body">
+                            <ul class="list-unstyled">
+                                <li><b>Type:</b> NPM module</li>
+                                <li><b>Skills:</b> JS, Node.js</li>
+                                <li><b>At:</b> EdgeJS</li>
+                                <li><b>About:</b> a npm package that handles the creation of irreversible ObjecId's. Little but powerfull and fast.</li>
+                                <li><b>URL:</b> <a href="https://www.npmjs.com/package/edge-uniqd" target="_blank">npmjs.com/package/edge-uniqd</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Igeek</div>
+                        <div class="panel-body">
+                            <ul class="list-unstyled">
+                                <li><b>Type:</b> Website</li>
+                                <li><b>Skills:</b> HTML5, CSS3, Bootstrap, JS, Bolt, twig</li>
+                                <li><b>At:</b> Freelance</li>
+                                <li><b>About:</b> The website for a new technology brand, it's in the first stage of development but was a good work. I learned a new CMS here, a lot of new twig templating and tons of responsive web desing approaches.</li>
+                                <li><b>URL:</b> <a href="http://igeekproducts.com" target="_blank">igeekproducts.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Kassa</div>
+                        <div class="panel-body">
+                            <ul class="list-unstyled">
+                                <li><b>Type:</b> Website</li>
+                                <li><b>Skills:</b> JS, Wordpress, twig</li>
+                                <li><b>At:</b> Firesoft</li>
+                                <li><b>About:</b> My job here was make the backend and the structure for searchs (Categories, tags) and various functions on the <code>functions.php</code>, to consume with twig and then make a flat JS filter.</li>
+                                <li><b>URL:</b> <a href="http://kassa.com.pa/" target="_blank">kassa.com.pa/</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Byrt&Co</div>
+                        <div class="panel-body">
+                            <ul class="list-unstyled">
+                                <li><b>Type:</b> Website</li>
+                                <li><b>Skills:</b> HTML5, CSS3, Bootstrap, JS, Wordpress, twig</li>
+                                <li><b>At:</b> Firesoft</li>
+                                <li><b>About:</b> this project was a challenge in those days. The design was made by another designer and i participated coding it. My job there was to develop the wordpress backend, and create the modular theme using twig.  The JS section was my job, i created a flat filter with some events for the homepage.</li>
+                                <li><b>URL:</b> <a href="http://firesoftca.cloudapp.net/byrt/" target="_blank">firesoftca.cloudapp.net/byrt/</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="moreabout" class="col-md-12 sections">
+                <h2 class="section-title text-center">A little big more about me <i class="fa fa-child"></i></h2>
+                <h3 class="section-sub-title text-center">Some extra things</h3>
+
+                <div class="col-md-8 col-md-offset-2">
+                    <p>There are some other things you should know about me in addition to what is already known.</p>
+
+                    <p>I tend to be obssesive (in the good way) with my job. This is good sometimes, and some other times not at all. I have the necessity to know that what i'm doing, i'm doing it right.</p>
+                    <h4>Hobbies</h4>
+                    <p>At personal level, i have some hobbies, like:</p>
+                    <ul>
+                        <li>Play Videogames</li>
+                        <li>MTG: Magic the gathering</li>
+                        <li>Reading</li>
+                        <li>TV Series</li>
+                    </ul>
+                </div>
+            </section>
+            <!-- //projects -->
         </div>
-        <div class="hero-image"><img src="img/js.png" alt="no definido" class="hero-img"/></div>
-        <blockquote class="excerpt">Aprendiendo como utilizar los documentFragments para mejorar el performance en el manejo en el DOM</blockquote>
-        <div class="readmore"><a href="/posts/dev/jugando-con-los-documentfragments.html">Leer más</a></div>
-      </article>
-      <article class="post-item">
-        <h2 class="post-title"><a href="/posts/dev/otro-pequeño-paso.html">Otro paso corto hacia adelante</a></h2>
-        <div class="postbox">
-          <div>
-            <p class="postbox-item"><i class="icon-pacman"> </i>Nano
-            </p>
-            <p class="postbox-item"><i class="icon-clock"></i>30/05/2015
-            </p>
-            <p class="postbox-item"><i class="icon-price-tags"></i>dev
-            </p>
-          </div>
-        </div>
-        <div class="hero-image"><img src="img/linus-torvalds-nvidia.jpg" alt="Linus Torvalds Nvidia" class="hero-img"/></div>
-        <blockquote class="excerpt">'Libere rápido y amenudo, escuche a sus clientes'. Trato de guiarme por ese pequeño extracto de las palabras de Linus Torvalds</blockquote>
-        <div class="readmore"><a href="/posts/dev/otro-pequeño-paso.html">Leer más</a></div>
-      </article>
-      <article class="post-item">
-        <h2 class="post-title"><a href="/posts/opinion/empezando.html">Empezando de nuevo</a></h2>
-        <div class="postbox">
-          <div>
-            <p class="postbox-item"><i class="icon-pacman"> </i>Nano
-            </p>
-            <p class="postbox-item"><i class="icon-clock"></i>24/05/2015
-            </p>
-            <p class="postbox-item"><i class="icon-price-tags"></i>opinion
-            </p>
-          </div>
-        </div>
-        <div class="hero-image"><img src="img/monkeywattitude.jpg" alt="El mono" class="hero-img"/></div>
-        <blockquote class="excerpt">Supongo que no hay demasiado que decir, cuando apenas empiezas a escribir luego de tantos años... imagina que este es mi holamundo, y dile hola al mono.</blockquote>
-        <div class="readmore"><a href="/posts/opinion/empezando.html">Leer más</a></div>
-      </article>
-    </section>
-    <div class="paginator-container">
-      <div class="paginator"></div>
+
     </div>
-    <script type="text/javascript">
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      
-      ga('create', 'UA-63584602-1', 'auto');
-      ga('send', 'pageview');
-      
-    </script><script src='js/vendor/jquery-2.1.4.min.js'></script>
-<script src='js/vendor/jquery-nanopaginator.js'></script>
-<script src='js/prism.js'></script>
-<script src='js/main.js'></script>
-  </body>
+    <!-- container -->
+    <footer class="container-fluid visible-xs visible-sm">
+        <h3 class="text-center"><a href="#" data-scroll>It's a long way, to the top <i class="fa fa-music"></i></a></h3>
+    </footer>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/sweet-scroll.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>

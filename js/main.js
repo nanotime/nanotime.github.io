@@ -1,10 +1,3 @@
 (function() {
-  $('body').nanoPaginator({
-    posts: 3,
-    postsContainer: '.content',
-    postItem: '.post-item'
-  });
-
-}).call(this);
-
- //# sourceMappingURL=main.js.map
+  var sweetScroll = new SweetScroll();
+}).call(this)
