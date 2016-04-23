@@ -1,0 +1,28 @@
+{
+  "name": "nano-me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Javier Marin <nano.world.contact@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.12.3",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-copy2": "^0.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sourcemaps": "^2.0.0-alpha",
+    "gulp-stylus": "^2.3.1",
+    "gulp-uglify": "^1.5.3"
+  },
+  "dependencies": {
+    "bootstrap-styl": "^5.0.5",
+    "font-awesome": "^4.6.1",
+    "jquery": "^2.2.3",
+    "rupture": "^0.6.1",
+    "sweet-scroll": "^0.7.0"
+  }
+}
